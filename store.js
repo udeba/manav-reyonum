@@ -8,4 +8,11 @@ function selectproduct(event) {
   let price = buton.querySelectorAll(".shop-item-price")[0].innerText;
   let image = buton.querySelectorAll(".shop-item-image")[0].src;
   console.log(title, price, image);
+  addToCardItem(title, price, image);
+}
+function addToCardItem(title, price, image) {
+  let cardrow = document.createElement("div");
+  cardrow.innerText = title;
+  let carditemsway = document.querySelectorAll(".cart-items")[0];
+  carditemsway.appendChild(cardrow);
 }
